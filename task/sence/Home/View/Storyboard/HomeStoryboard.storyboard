@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="OVa-3h-VTt">
+            <objects>
+                <viewController storyboardIdentifier="HomeStoryboard" id="qP2-AN-VRX" customClass="HomeViewController" customModule="task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fq1-DC-J3Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="tuA-se-YCK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieF-Gi-vTq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="YdK-Cl-Ffm">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="328"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="H8n-Ob-gRw">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character" translatesAutoresizingMaskIntoConstraints="NO" id="3O1-mX-OUB">
+                                                <rect key="frame" x="0.0" y="112" width="414" height="216"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharaterList" translatesAutoresizingMaskIntoConstraints="NO" id="LOq-Rl-Luy">
+                                        <rect key="frame" x="20" y="398" width="217" height="47"/>
+                                    </imageView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="amF-Cn-IqW">
+                                        <rect key="frame" x="30" y="465" width="354" height="411"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.20000000000000001" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="amF-Cn-IqW" firstAttribute="leading" secondItem="ieF-Gi-vTq" secondAttribute="leading" constant="30" id="B4Z-ug-sGA"/>
+                                    <constraint firstItem="YdK-Cl-Ffm" firstAttribute="centerX" secondItem="ieF-Gi-vTq" secondAttribute="centerX" id="BTM-oh-aJt"/>
+                                    <constraint firstItem="YdK-Cl-Ffm" firstAttribute="top" secondItem="ieF-Gi-vTq" secondAttribute="top" constant="50" id="Et0-08-4CR"/>
+                                    <constraint firstAttribute="bottom" secondItem="amF-Cn-IqW" secondAttribute="bottom" constant="20" id="MOa-Mb-rjz"/>
+                                    <constraint firstAttribute="trailing" secondItem="amF-Cn-IqW" secondAttribute="trailing" constant="30" id="Vnv-zA-rBV"/>
+                                    <constraint firstItem="LOq-Rl-Luy" firstAttribute="top" secondItem="YdK-Cl-Ffm" secondAttribute="bottom" constant="20" id="a82-1J-8Lj"/>
+                                    <constraint firstItem="LOq-Rl-Luy" firstAttribute="leading" secondItem="ieF-Gi-vTq" secondAttribute="leading" constant="20" id="sNd-0g-cXs"/>
+                                    <constraint firstItem="amF-Cn-IqW" firstAttribute="top" secondItem="LOq-Rl-Luy" secondAttribute="bottom" constant="20" id="wrl-Yo-f6U"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V8o-Eb-rGt"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tuA-se-YCK" secondAttribute="bottom" id="CSI-fk-QlH"/>
+                            <constraint firstAttribute="bottom" secondItem="ieF-Gi-vTq" secondAttribute="bottom" id="DWG-gG-I40"/>
+                            <constraint firstItem="V8o-Eb-rGt" firstAttribute="trailing" secondItem="tuA-se-YCK" secondAttribute="trailing" id="Hcm-ta-fMi"/>
+                            <constraint firstItem="tuA-se-YCK" firstAttribute="leading" secondItem="V8o-Eb-rGt" secondAttribute="leading" id="Ixa-Le-dDk"/>
+                            <constraint firstItem="ieF-Gi-vTq" firstAttribute="top" secondItem="Fq1-DC-J3Y" secondAttribute="top" id="YwP-5r-QqW"/>
+                            <constraint firstItem="tuA-se-YCK" firstAttribute="top" secondItem="Fq1-DC-J3Y" secondAttribute="top" id="opV-Ds-50L"/>
+                            <constraint firstItem="ieF-Gi-vTq" firstAttribute="leading" secondItem="V8o-Eb-rGt" secondAttribute="leading" id="rvT-eF-dAi"/>
+                            <constraint firstItem="V8o-Eb-rGt" firstAttribute="trailing" secondItem="ieF-Gi-vTq" secondAttribute="trailing" id="t2t-mf-nB1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="characterListTableView" destination="amF-Cn-IqW" id="jbe-3G-bMa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OfZ-wB-lNO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="72"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CharaterList" width="217" height="47"/>
+        <image name="character" width="414" height="216"/>
+        <image name="logo" width="138" height="82"/>
+        <image name="splash" width="560.5" height="896"/>
+    </resources>
+</document>
